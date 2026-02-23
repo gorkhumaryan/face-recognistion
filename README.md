@@ -1,40 +1,41 @@
-Face Recognition System (FaceNet + Cosine Similarity)
-Overview
+rgba(170, 177, 255, 0.93) Recognition System (FaceNet + Cosine Similarity)
+## Overview
 
 This project implements a face recognition system using a pretrained FaceNet model.
 
-🔁 Pipeline
+## Pipeline
 Image → 512D Embedding → Cosine Similarity vs Gallery → Identity or "Unknown"
 
 The system supports open-set recognition, meaning it can detect unknown individuals.
 
-Features
+## Features
 
-✅ Pretrained FaceNet (VGGFace2 weights)
+ Pretrained FaceNet (VGGFace2 weights)
 
-✅ Cosine similarity matching
+ Cosine similarity matching
 
-✅ Threshold tuning using validation set
+ Threshold tuning using validation set
 
-✅ Open-set evaluation (unknown detection)
+ Open-set evaluation (unknown detection)
 
-✅ ROC curve and AUC analysis
+ ROC curve and AUC analysis
 
-Installation
+## Installation
 
 Create a virtual environment and install dependencies:
 
 pip install -r requirements.txt
-Usage
-1️⃣ Split Dataset
+
+## Usage
+### Split Dataset
 python split_dataset.py
-2️⃣ Build Gallery
+### Build Gallery
 python build_gallery.py
-3️⃣ Test Recognition
+### Test Recognition
 python recognize.py
-4️⃣ Open-set Evaluation
+### Open-set Evaluation
 python open_set_eval.py
-Results (Open-set Evaluation)
+## Results (Open-set Evaluation)
 Validation
 
 Known accuracy: 0.995
@@ -49,7 +50,7 @@ Unknown detection: 0.944 (36 images)
 
 ROC AUC ≈ 0.999
 
-Technical Details
+## Technical Details
 
 Embedding size: 512
 
@@ -59,7 +60,7 @@ Threshold selected via validation set
 
 Open-set evaluation protocol applied
 
-Notes
+## Notes
 
 Dataset images are assumed to be cropped faces.
 
